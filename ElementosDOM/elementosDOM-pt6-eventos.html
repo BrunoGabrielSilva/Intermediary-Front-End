@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos DOM | Eventos</title>
+</head>
+<body>
+    <p>Clique no botão a seguir e receba a melhor noticia do seu dia</p>
+    <form>
+        <input type="button" value="Clique aqui" onclick="exemploEvento()">
+    </form>
+    <h1 id="exemploMouse" onmouseover="exemploMouse()" onmouseout="exemploMouseOut()">
+        A vida é triste sem Jesus :( 
+            <p>Mas calma lá, passe o mouse aqui e descubra a verdade!</p>
+
+    </h1>
+</body>
+<script>
+    //Função que será chamada quando o botão for clicado
+    //A função é chamada de evento
+    function exemploEvento(){
+        alert('Jesus te ama!');
+    }
+    //Função que será chamada quando o mouse passar por cima do elemento
+    function exemploMouse(){
+        document.getElementById('exemploMouse').innerText = 'Mas com Ele tudo é possível!';
+        document.getElementById('exemploMouse').style.background = 'LightGreen';}
+
+    //Função que será chamada quando o mouse sair do elemento
+    function exemploMouseOut(){
+        document.getElementById('exemploMouse').innerText = 'Aceite Jesus como seu Salvador, e tudo mudará!';
+        document.getElementById('exemploMouse').style.background = 'Red';
+    }    
+</script>
+</html>

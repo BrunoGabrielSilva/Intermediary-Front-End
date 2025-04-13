@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construindo um elemento dinâmico</title>
+
+</head>
+<body>
+    <ul id="lista">
+        <li>Elemento feito no body</li>
+    </ul>
+    <ul id="timesFutebol">
+
+    </ul>
+    
+</body>
+<script>
+    var elemento = document.createElement('div');
+    elemento.innerText = 'Elemento dinâmico criado com JavaScript';
+    elemento.style.background = 'purple';
+    elemento.style.color = 'white';
+    elemento.style.fontSize = '20px';
+    elemento.style.fontFamily = 'Arial';    
+    document.body.append(elemento);
+
+    var lista = document.getElementById('lista');
+    var elementoLista = document.createElement('li');
+    elementoLista.textContent = 'Elemento dinâmico criado com JavaScript';
+    elementoLista.style.background = 'lightGreen';
+    lista.appendChild(elementoLista);
+
+    times = ['Corinthians', 'São Paulo', 'Palmeiras', 'Santos'];
+
+    var listaTimes = document.querySelector('#timesFutebol');
+    for (var i = 0; i < times.length; i++){
+        var elementoListaTimes = document.createElement('li');
+        elementoListaTimes.textContent = times[i];
+        elementoListaTimes.style.background = 'lightBlue';
+        elementoListaTimes.style.border = '1px solid black';
+        elementoListaTimes.style.margin = '5px';
+        elementoListaTimes.style.padding = '5px';
+        listaTimes.appendChild(elementoListaTimes);
+    }
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 3 do DOM - Confirmação</title>
+</head>
+<body>
+    <h1>Quer algo bom para sua vida?</h1>
+    <button onclick="confirma()">
+        Se sim, clique aqui!
+    </button>
+</body>
+<script>
+    function confirma(){
+        let confirmacao = window.confirm("Você aceita Jesus como seu salvador?");
+        if(confirmacao == true){
+            window.alert("Oh Glória, você irá para o céu!");
+        }else{
+            window.alert("Uma pena, vc irá para o inferno!");
+        }
+    }
+</script>
+</html>

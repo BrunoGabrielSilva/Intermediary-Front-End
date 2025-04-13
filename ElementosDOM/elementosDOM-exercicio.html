@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio elementos DOM</title>
+</head>
+<body>
+    <div class="estilo">
+        Div com estilo 1
+    </div>
+    <div class="estilo">
+        Div com estilo 2
+    </div>
+    <p class="estilo"> 
+        Elemento P com estilo 
+    </p>
+    <p>
+        <span class="estilo">
+            Elemento SPAN com estilo
+        </span>
+        Elemento Span dentro do P
+    </p>
+
+
+</body>
+<script>
+    //Capturando o primeiro elemento com a classe Estilo
+    var elemento1 = document.querySelectorAll('.estilo');
+    for (var i = 0; i < elemento1.length; i++){
+        elemento1[i].style.background = 'blue';
+        elemento1[i].style.color = 'white';
+        elemento1[i].style.fontSize = '20px';
+        elemento1[i].textContent = elemento1[i].textContent.toUpperCase();
+    }
+    var elemento2 = document.getElementsByTagName('p')[1];
+    elemento2.style.background = 'blue';
+    elemento2.style.color = 'white';
+    elemento2.style.fontSize = '20px';
+    elemento2.textContent = elemento2.textContent.toUpperCase();
+
+</script>
+</html>

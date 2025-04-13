@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos DOM | Formulários V2</title>
+</head>
+<body>
+    <form name="formCadastro" onsubmit="return validarFormulario()">
+        <label for="">Email</label>
+        <input id="email" type="email" placeholder="Digite seu e-mail">
+        <br>
+        <br>
+        <label for="">Nome</label>
+        <input id="nome"  type="text" placeholder="Digite seu nome">
+        <br>
+        <button type="submit">
+            Cadastrar
+        </button>
+    </form>
+    
+</body>
+<script>
+        function validarFormulario(){
+            var nomePessoa = document.forms["formCadastro"]["nome"].value;
+            if (nomePessoa == "") {
+                alert("Por favor, preencha o campo nome.");
+                event.preventDefault();
+            } else {
+                alert("Olá, " + nomePessoa + ". Seja bem-vindo(a)!");
+            }
+        }
+</script>
+</html>

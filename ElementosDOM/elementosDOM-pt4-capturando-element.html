@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de elementos</title>
+</head>
+<body>
+    <h1>Usando a captura de elementos com seletor do DOM</h1>
+    <h2>Linguagens de programação 2025</h2>
+    <ul>
+        <li>Java Script</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>GO</li>
+    </ul>
+
+    <div id ="mensagem" name="divmensagem" class="mensagem">
+    </div>
+
+    <div name="divmensagem" class="mensagem">
+    </div>
+
+    <div name="divmensagem" class="mensagem">
+    </div>
+
+    <div name="divmensagem" class="mensagem">
+    </div>
+
+    <span id="novoSpan" class="novo">
+        Aprendendo a capturar elementos do DOM agora com SPAN
+    </span>
+</body>
+<Script>
+    elemento0 = document.getElementsByTagName('li')[0];
+    elemento0.style.color = 'red';
+
+    elemento1 = document.getElementsByTagName('li')[1];
+    elemento1.style.background = 'blue';
+
+    elemento2 = document.getElementsByTagName('li')[2];
+    elemento2.innerText = 'C#';
+
+    div1 = document.getElementById('mensagem');
+    div1.innerHTML = '<p>A linguagem de programação mais utilizada no Brasil é Java Script</p>';
+
+    div2Name = document.getElementsByName('divmensagem')[1];
+    div2Name.innerText = 'A linguagem de dados mais utilizada no Brasil é Python';
+    div2Name.style.background = 'yellow';
+
+    div3Class = document.getElementsByClassName('mensagem')[2];
+    div3Class.innerText = 'A linguagem de programação mais utilizada no Brasil é C++';
+    div3Class.style.background = 'green';
+    div3Class.style.color = 'white';
+
+    span1 = document.querySelector('span.novo');
+    span1.style.background = 'purple';
+    span1.style.color = 'white';
+
+    elementoSeletor = document.querySelectorAll('.mensagem')[3];
+    elementoSeletor.innerHTML = '<p>Aprendendo a capturar elementos do DOM agora com SelectorAll</p>';
+    elementoSeletor.style.background = 'orange';
+
+
+</Script>
+</html>

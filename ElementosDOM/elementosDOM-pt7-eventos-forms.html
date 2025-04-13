@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos DOM | Formulários</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Email</label>
+        <input id="email" type="email" placeholder="Digite seu e-mail" required>
+        <br>
+        <br>
+        <label for="">Nome</label>
+        <input id="nome"  type="text" placeholder="Digite seu nome" required>
+        <br>
+        <button type="submit" onclick="novoItem()">
+            Cadastrar
+        </button>
+    </form>
+    
+</body>
+<script>
+    function novoItem(){
+        var campoNome = document.getElementById('nome');
+        alert('Olá, ' + campoNome.value + '. Seja bem-vindo(a)!');
+    }
+</script>
+</html>
